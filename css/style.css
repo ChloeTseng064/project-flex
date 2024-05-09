@@ -1,26 +1,88 @@
 *{
     box-sizing:border-box;
-    
+    margin: 0;
+    padding: 0;
 }
 body{
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     line-height: 1.25;
+    font-family: "Noto Sans TC", "Roboto", sans-serif;
 }
 .wrap{
     width: 1024px;
     margin: 0 auto;
 }
 header{
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
+.link ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.link li{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 5px;
+}
+.link li+li::before{
+    content:'|';
+    color:#d8d8d8;
+    position:absolute;
+    left:0;
+}
+.link img{
+    padding: 5px;
+}
+.link a{
+    text-decoration: none;
+    color:#00AAEC;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.menu nav a{
+    color:#00cc99;
+    text-decoration: none;
+    padding: 0 20px;
+}
+/* 待補 */
+/* .menu nav a:hover{ 
+    border-bottom: 1px solid #067042;
+} */
 
+.banner-bg{
+    height: 300px;
+    background: url("/images/banner.png") no-repeat center center /cover ;
+    display: flex;
+    align-items: center;
+}
+.banner-text{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 40px 0px 40px 20px;
+}
+.banner-text h2{
+    color:#fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+/* 卡片 */
 .course{
     display: flex;
     justify-content: space-around;
     font-family: "Noto Sans TC", sans-serif;
+    margin-bottom: 40px;
 }
-.course-item{
+.course-item{   
     border:1px solid #d8d8d8;
     border-radius: 8px;
     text-align: justify;
@@ -34,24 +96,116 @@ header{
     margin: 0 auto;
 }
 .course-item h2{
-    font-weight: 500;
+    font-size: 20px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     padding: 5px 0;
 }
 .course-item ul{
     list-style-position: inside;
 }
-footer{
-    margin-top: 30px;
+/* 表格 */
+.contrast{
+    width: 900px;
+    margin: 0 auto;
+}
+.contrast table{
+    width: 100%;
+    margin-bottom: 40px;
+}
+.contrast caption{
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+table th{
+    background-color: #f7f7f7;
+    border-top: 1px solid #d8d8d8;
+    border-bottom:1px solid #d8d8d8;
+    text-align: left;
+    font-weight: 600;
+    padding: 10px;
+}
+table tr:nth-child(even){
+    background-color: #f7f7f7;
+}
+table td{
+    padding: 10px;
+    border-bottom:1px solid #d8d8d8;
+}
+/* form 留下資料 */
+.info{
+    background-image: linear-gradient( #067042 0%, #339b7a 100%);
+    padding: 30px 10px 30px 10px;
+    margin: 0 auto;
+    width: 1024px;
+}
+.info input{
+    border-radius: 2px;
+    border:1px solid #d8d8d8;
+    line-height: 1.5;
+}
+.info .info-text{
+    margin-bottom: 10px;
+}
+.info h2{
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 5px;
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+form .import{
+    width: 100%;
+    margin-right:30px;
+}
+
+form .import input{
+    width: 100%;
+    height: 100%;
+}
+form .client{
+    width: 100%;
+}
+.client label{
+    color:#fff;
+}
+.client input{
+    padding: 8px;
+}
+form .group{
     display: flex;
     flex-direction: column;
-    background-color: #aaa;
-    padding: 10px;
+    padding-bottom: 5px;
+}
+form .btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.btn input{
+    background-color: #00cc99;
     color:#fff;
-    text-align: center;
+    padding: 5px 20px;
+    border:1px solid #00cc99;
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.contact li{
+    display: flex;
+    padding-top: 10px;
 }
 footer a{
     text-decoration: none;
-    color:#fff;
+    color:#ff61bd;
 }
